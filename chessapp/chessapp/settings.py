@@ -122,7 +122,11 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "reactchess/build/static")]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "reactchess/build/static"),
+    os.path.join(BASE_DIR, "reactchess/build/assets"),
+    os.path.join(BASE_DIR, "reactchess/build/"),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
