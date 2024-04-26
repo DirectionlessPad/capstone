@@ -7,7 +7,7 @@
     <title>{% block title %}Chess App{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
     <meta name="csrf-token" content={{csrf_token}}>
     <meta charset="utf-8" />
     <link rel="icon" href="/static/favicon.ico?" />
@@ -21,12 +21,12 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#" id="home-button">Home</a>
-
-        <div>
-            <ul class="navbar-nav mr-auto">
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div id="sidebar-header">
+                <h2>Menu</h2>
+            </div>
+            <ul class="nav-list">
                 {% if user.is_authenticated %}
                 <li class="nav-item" id="profile" data-user="{{ user.username }}">
                     <a class="nav-link" href="#"><strong>{{ user.username }}</strong></a>
@@ -45,8 +45,8 @@
                 </li>
                 {% endif %}
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     <div class="body">
         {% block body %}

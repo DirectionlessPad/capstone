@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    padding: 15px;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background-color: black;
+    color: #779556;
+    transition: all 0.3s;
+}
+
+#sidebar .nav-list {
+    list-style-type: none;
+}
